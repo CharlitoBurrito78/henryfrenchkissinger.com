@@ -1,80 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henry French Kissinger — The Friction of Existence.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-Henry
-French
-Kissinger
-A Creative Collective for the Post-Authentic Era.
-The Market Opportunity Is the Architectural Dismantling of Reality.
-In a global landscape saturated with meaning, there is no greater luxury than the relief of the recursive. Henry French Kissinger projects do not exist to solve problems; they exist to document the friction of their own existence.
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f4f0;
+      --border: 2.5px solid #0a0a0a;
+    }
 
-We operate on the principle that if you stare at a word long enough, it loses its meaning.
+    html, body {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'Space Mono', monospace;
+      overflow-x: hidden;
+    }
 
-We intend to do that to the human experience.
+    /* ── GRID OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--black) 1px, transparent 1px),
+        linear-gradient(90deg, var(--black) 1px, transparent 1px);
+      background-size: 80px 80px;
+      opacity: 0.04;
+      z-index: 0;
+    }
 
-I
-Strategic Pillar I
-The Ouroboros Effect
-Traditional media models rely on a subject. We rely on the observation of the observer. By shifting the lens, we eliminate the need for the original object.
+    /* ── SECTIONS ── */
+    section {
+      position: relative;
+      z-index: 1;
+      border-bottom: var(--border);
+      overflow: hidden;
+    }
 
-From Subject to Reflection.
-From Reflection to Recursion.
-Pappayahtzi: Solving the Infinite Mirror Problem
-We have enlisted Ron Galella Jr. to lead a defected army of legendary paparazzi. Their mandate is not to photograph celebrities, but to photograph the paparazzi who are photographing the paparazzi.
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      grid-template-rows: 1fr auto;
+      min-height: 100vh;
+      border-bottom: var(--border);
+    }
 
-Scenario: 47 photographers in one driveway.
-Outcome: Subject obsolescence.
-Metric: 100% Reflection / 0% Object.
-FIG 1.1: RECURSIVE SURVEILLANCE SPIRAL
-II
-Strategic Pillar II
-Challenging Colonial Constructs of Time & Physics
-Standard definitions of 'return' and 'time' are flexible variables. We reject linear progression in favor of geological timeframes and vertical oscillation.
+    .hero-left-bar {
+      grid-row: 1 / 3;
+      border-right: var(--border);
+    }
 
-Baloomerang™:
-Atmospheric Return Technology™
-Eventually.
-Problem: Traditional boomerangs are aggressive. They demand athletic competence and immediate results.
-Solution: A helium-filled, latex vessel designed for the patient. A subversion of the return-arc.
-Spec: It goes away. It may return in a different zip code, or a different decade. 'Return' is redefined as a geological timeframe.
-Human Time Is a Colonial Construct Incompatible with Biological Reality.
-THE INSIGHT: THE 'X7' RULE IS CRUDE AND INACCURATE. VETERINARY SCIENCE ESTABLISHES THAT CANINE AGING IS NON-LINEAR.
-THE TECH: THE DOG CLOCK™ IS A PRECISION CHRONOMETRIC DEVICE UTILIZING A PROPRIETARY ALGORITHMIC OVERLAY.
-The Three-Tier Aging Algorithm
-TIER 1 (0–365 Days): 15:1 Acceleration Rate
-TIER 2 (366–730 Days): 9:1 Stepped Reduction
-TIER 3 (731+ Days): 5:1 Stabilized Rate
-FEATURE: Holiday Synchronization Module (HSM). Subjects experience Christmas approximately 7 times per solar year.
-III
-Strategic Pillar III
-Somatic Subversion & the Singular Utility Series
-We seek the radical pursuit of killing two birds with one very heavy stone. We remove the competitive metrics of 'the score' and 'the choice' to reveal pure utility.
+    .hero-wordmark {
+      padding: 60px 48px 48px;
+      grid-column: 2;
+    }
 
-Singular Utility Series
-The Message Therapist: Dual-Discipline Somatic Processing
-Replacing the analyst's leather chaise with the sterile, vinyl topography of a massage table.
+    .hero-wordmark h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(72px, 10vw, 140px);
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
 
-Principal: Dr. Franz Kissinger, PhD (Stanford), LMT (Swedish Institute).
-Innovation: Structural Elegance + Gig-Economy Efficiency → Life-Saving Authority.
-Singular Utility Series
-No Dice: Non-Numerical Kinetic Randomizers
-A game for children where the dice have no numbers. Just white.
+    .hero-tagline {
+      grid-column: 2;
+      border-top: var(--border);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
 
-Framework: You do not roll to win. You roll to see the dice tumble.
-Outcome: There is no score. There are no losers. Pure kinetic joy.
-Vertical Oscillation Protocol
-The Skipper: Efficiency vs. Value
-The first human traversal of the United States via skipping. 2,448 miles.
+    .hero-tagline span {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
 
-Subject: Cornelius Saltzmann.
-Insight: Skipping is a gate of joy, yet Saltzmann is a man of profound sorrow.
-Strategic Value: The most inefficient way to travel, which makes it the only way worth filming.
-Post-Authentic Era
-Henry French Kissinger — The Friction of Existence.
-Projects do not exist to solve problems. They exist to document the friction of their own existence.
+    /* ── MANIFESTO ── */
+    .manifesto {
+      display: grid;
+      grid-template-columns: 1fr 1fr 320px;
+      gap: 0;
+      min-height: 340px;
+    }
 
-Status: Ongoing.
-Metric: 100% Reflection / 0% Object.
-The Mission
-We are not here to create content. We are here to create a loop so tight that the audience disappears.
-— The Board of Henry French Kissinger
-Henry French Kissinger
-Confidential Strategy Deck. Do Not Distribute.
+    .manifesto-block {
+      padding: 48px 40px;
+      border-right: var(--border);
+    }
+
+    .manifesto-block:last-child { border-right: none; }
+
+    .manifesto-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(28px, 3.5vw, 46px);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      grid-column: 1 / -1;
+      padding: 40px 40px 0;
+      border-bottom: none;
+    }
+
+    .full-width-head {
+      grid-column: 1 / -1;
+      padding: 40px 40px 0;
+    }
+
+    .manifesto-head-row {
+      grid-column: 1 / -1;
+      border-bottom: var(--border);
+      padding: 36px 40px;
+    }
+
+    .manifesto-head-row h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(28px, 3.5vw, 48px);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .body-text {
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .italic-pull {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: clamp(22px, 2.8vw, 34px);
+      line-height: 1.15;
+    }
+
+    /* spiral placeholder */
+    .spiral {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .spiral svg { width: 180px; height: 180px; opacity: 0.85; }
+
+    /* ── PILLARS ── */
+    .pillar {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 280px;
+    }
+
+    .pillar-numeral {
+      border-right: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(120px, 18vw, 220px);
+      line-height: 1;
+      color: var(--black);
+      padding: 32px;
+      /* outline letter style */
+      -webkit-text-stroke: 3px var(--black);
+      color: transparent;
+    }
+
+    .pillar-content {
+      padding: 48px 48px;
+    }
+
+    .pillar-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.5;
+    }
+
+    .pillar-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(28px, 3.5vw, 48px);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: var(--border);
+    }
+
+    .pillar-body {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .pillar-list {
+      list-style: none;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .pillar-list li::before {
+      content: attr(data-num) '. ';
+      font-weight: 700;
+    }
+
+    /* ── PROJECT CARDS ── */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card {
+      border-right: var(--border);
+      padding: 48px 40px;
+    }
+
+    .project-card:last-child { border-right: none; }
+    .project-card:nth-child(n+3) { border-top: var(--border); }
+
+    .project-card-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 12px;
+    }
+
+    .project-card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(22px, 2.5vw, 36px);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      line-height: 2;
+      border-top: 1.5px solid rgba(10,10,10,0.15);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    .project-meta strong { font-weight: 700; }
+
+    /* ── MISSION ── */
+    .mission {
+      padding: 80px 48px;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mission-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: var(--border);
+    }
+
+    .mission-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(48px, 8vw, 120px);
+      text-transform: uppercase;
+      line-height: 0.92;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .mission-attribution {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: right;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: var(--border);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 24px 48px;
+      border-top: var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-sub {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      opacity: 0.5;
+    }
+
+    /* ── DIVIDER RULE ── */
+    .thick-rule {
+      height: 4px;
+      background: var(--black);
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-wordmark h1 { animation: fadeUp 0.7s ease both; }
+    .hero-tagline     { animation: fadeUp 0.7s 0.2s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 60px 1fr; }
+      .hero-wordmark { padding: 32px 24px; }
+      .hero-tagline  { padding: 16px 24px; }
+      .manifesto { grid-template-columns: 1fr; }
+      .manifesto-block { border-right: none; border-bottom: var(--border); }
+      .pillar { grid-template-columns: 80px 1fr; }
+      .pillar-numeral { font-size: 60px; }
+      .projects { grid-template-columns: 1fr; }
+      .project-card { border-right: none; border-bottom: var(--border); }
+      .mission { padding: 48px 24px; }
+      footer { grid-template-columns: 1fr; gap: 8px; padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-left-bar"></div>
+    <div class="hero-wordmark">
+      <h1>Henry<br>French<br>Kissinger</h1>
+    </div>
+    <div class="hero-tagline">
+      <span>A Creative Collective for the Post-Authentic Era.</span>
+    </div>
+  </section>
+
+  <!-- ══ MANIFESTO ══ -->
+  <section class="manifesto" style="display:block; padding:0;">
+    <div class="manifesto-head-row">
+      <h2>The Market Opportunity Is the Architectural Dismantling of Reality.</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 300px; border-top: none;">
+      <div class="manifesto-block">
+        <p class="body-text">In a global landscape saturated with meaning, there is no greater luxury than the relief of the recursive. Henry French Kissinger projects do not exist to solve problems; they exist to document the friction of their own existence.</p>
+      </div>
+      <div class="manifesto-block">
+        <p class="italic-pull">We operate on the principle that if you stare at a word long enough, it loses its meaning.<br><br>We intend to do that to the human experience.</p>
+      </div>
+      <div class="spiral">
+        <!-- Recursive spiral SVG -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0a0a0a" stroke-width="1.2">
+          <circle cx="100" cy="100" r="90"/>
+          <circle cx="100" cy="100" r="75"/>
+          <circle cx="100" cy="100" r="61"/>
+          <circle cx="100" cy="100" r="49"/>
+          <circle cx="100" cy="100" r="38"/>
+          <circle cx="100" cy="100" r="28"/>
+          <circle cx="100" cy="100" r="19"/>
+          <circle cx="100" cy="100" r="11"/>
+          <circle cx="100" cy="100" r="5"/>
+          <circle cx="100" cy="100" r="1.5" fill="#0a0a0a"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PILLAR I ══ -->
+  <section class="pillar">
+    <div class="pillar-numeral">I</div>
+    <div class="pillar-content">
+      <div class="pillar-label">Strategic Pillar I</div>
+      <div class="pillar-title">The Ouroboros Effect</div>
+      <div class="thick-rule"></div>
+      <p class="pillar-body">Traditional media models rely on a subject. We rely on the observation of the observer. By shifting the lens, we eliminate the need for the original object.</p>
+      <ul class="pillar-list">
+        <li data-num="01">From Subject to Reflection.</li>
+        <li data-num="02">From Reflection to Recursion.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ PROJECT: PAPPAYAHTZI ══ -->
+  <section style="padding: 48px 40px; border-bottom: var(--border);">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(24px,3vw,40px); text-transform:uppercase; margin-bottom:24px;">
+      Pappayahtzi: Solving the Infinite Mirror Problem
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+      <p class="body-text">We have enlisted Ron Galella Jr. to lead a defected army of legendary paparazzi. Their mandate is not to photograph celebrities, but to photograph the paparazzi who are photographing the paparazzi.</p>
+      <div class="body-text" style="font-family:'Space Mono',monospace; font-size:11px; line-height:2; border-left: var(--border); padding-left:32px;">
+        <div>Scenario: 47 photographers in one driveway.</div>
+        <div>Outcome: Subject obsolescence.</div>
+        <div>Metric: 100% Reflection / 0% Object.</div>
+        <div style="margin-top:16px; font-weight:700;">FIG 1.1: RECURSIVE SURVEILLANCE SPIRAL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PILLAR II ══ -->
+  <section class="pillar">
+    <div class="pillar-numeral">II</div>
+    <div class="pillar-content">
+      <div class="pillar-label">Strategic Pillar II</div>
+      <div class="pillar-title">Challenging Colonial Constructs of Time &amp; Physics</div>
+      <div class="thick-rule"></div>
+      <p class="pillar-body">Standard definitions of 'return' and 'time' are flexible variables. We reject linear progression in favor of geological timeframes and vertical oscillation.</p>
+    </div>
+  </section>
+
+  <!-- ══ PROJECT: BALOOMERANG ══ -->
+  <section style="display:grid; grid-template-columns:1fr 1fr; border-bottom: var(--border);">
+    <div style="padding:48px 40px; border-right: var(--border);">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(28px,3.5vw,52px); text-transform:uppercase; line-height:1; margin-bottom:24px;">Baloomerang™:<br>Atmospheric Return Technology™</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,5vw,72px); text-transform:uppercase;">Eventually.</div>
+    </div>
+    <div style="padding:48px 40px;">
+      <div class="body-text" style="margin-bottom:16px;"><strong>Problem:</strong> Traditional boomerangs are aggressive. They demand athletic competence and immediate results.</div>
+      <div class="body-text" style="margin-bottom:16px;"><strong>Solution:</strong> A helium-filled, latex vessel designed for the patient. A subversion of the return-arc.</div>
+      <div class="body-text"><strong>Spec:</strong> It goes away. It may return in a different zip code, or a different decade. 'Return' is redefined as a geological timeframe.</div>
+    </div>
+  </section>
+
+  <!-- ══ DOG CLOCK ══ -->
+  <section style="padding:0; border-bottom: var(--border);">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(22px,3vw,40px); text-transform:uppercase; padding:36px 40px 0; line-height:1;">
+      Human Time Is a Colonial Construct Incompatible with Biological Reality.
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; border-top: var(--border); margin-top:32px;">
+      <div style="padding:40px; border-right: var(--border); font-size:12px; line-height:2; font-family:'Space Mono',monospace;">
+        <div style="margin-bottom:12px;"><strong>THE INSIGHT:</strong> THE 'X7' RULE IS CRUDE AND INACCURATE. VETERINARY SCIENCE ESTABLISHES THAT CANINE AGING IS NON-LINEAR.</div>
+        <div><strong>THE TECH:</strong> THE DOG CLOCK™ IS A PRECISION CHRONOMETRIC DEVICE UTILIZING A PROPRIETARY ALGORITHMIC OVERLAY.</div>
+      </div>
+      <div style="padding:40px; font-size:12px; line-height:2; font-family:'Space Mono',monospace;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:20px; text-transform:uppercase; margin-bottom:16px;">The Three-Tier Aging Algorithm</div>
+        <div><strong>TIER 1</strong> (0–365 Days): 15:1 Acceleration Rate</div>
+        <div><strong>TIER 2</strong> (366–730 Days): 9:1 Stepped Reduction</div>
+        <div><strong>TIER 3</strong> (731+ Days): 5:1 Stabilized Rate</div>
+        <div style="margin-top:16px; border-top:1.5px solid rgba(10,10,10,0.15); padding-top:12px;"><strong>FEATURE:</strong> Holiday Synchronization Module (HSM). Subjects experience Christmas approximately 7 times per solar year.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PILLAR III ══ -->
+  <section class="pillar">
+    <div class="pillar-numeral">III</div>
+    <div class="pillar-content">
+      <div class="pillar-label">Strategic Pillar III</div>
+      <div class="pillar-title">Somatic Subversion &amp; the Singular Utility Series</div>
+      <div class="thick-rule"></div>
+      <p class="pillar-body">We seek the radical pursuit of killing two birds with one very heavy stone. We remove the competitive metrics of 'the score' and 'the choice' to reveal pure utility.</p>
+    </div>
+  </section>
+
+  <!-- ══ PROJECT CARDS ══ -->
+  <section class="projects">
+    <div class="project-card">
+      <div class="project-card-label">Singular Utility Series</div>
+      <div class="project-card-title">The Message Therapist: Dual-Discipline Somatic Processing</div>
+      <p class="body-text">Replacing the analyst's leather chaise with the sterile, vinyl topography of a massage table.</p>
+      <div class="project-meta">
+        <div><strong>Principal:</strong> Dr. Franz Kissinger, PhD (Stanford), LMT (Swedish Institute).</div>
+        <div><strong>Innovation:</strong> Structural Elegance + Gig-Economy Efficiency → Life-Saving Authority.</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-label">Singular Utility Series</div>
+      <div class="project-card-title">No Dice: Non-Numerical Kinetic Randomizers</div>
+      <p class="body-text">A game for children where the dice have no numbers. Just white.</p>
+      <div class="project-meta">
+        <div><strong>Framework:</strong> You do not roll to win. You roll to see the dice tumble.</div>
+        <div><strong>Outcome:</strong> There is no score. There are no losers. Pure kinetic joy.</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-label">Vertical Oscillation Protocol</div>
+      <div class="project-card-title">The Skipper: Efficiency vs. Value</div>
+      <p class="body-text">The first human traversal of the United States via skipping. 2,448 miles.</p>
+      <div class="project-meta">
+        <div><strong>Subject:</strong> Cornelius Saltzmann.</div>
+        <div><strong>Insight:</strong> Skipping is a gate of joy, yet Saltzmann is a man of profound sorrow.</div>
+        <div><strong>Strategic Value:</strong> The most inefficient way to travel, which makes it the only way worth filming.</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-label">Post-Authentic Era</div>
+      <div class="project-card-title">Henry French Kissinger — The Friction of Existence.</div>
+      <p class="body-text">Projects do not exist to solve problems. They exist to document the friction of their own existence.</p>
+      <div class="project-meta">
+        <div><strong>Status:</strong> Ongoing.</div>
+        <div><strong>Metric:</strong> 100% Reflection / 0% Object.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MISSION ══ -->
+  <section class="mission">
+    <div class="mission-label">The Mission</div>
+    <div class="mission-text">
+      We are not here to create content. We are here to create a loop so tight that the audience disappears.
+    </div>
+    <div class="mission-attribution">— The Board of Henry French Kissinger</div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-wordmark">Henry French Kissinger</div>
+    <div class="footer-sub">Confidential Strategy Deck. Do Not Distribute.</div>
+  </footer>
+
+</body>
+</html>
