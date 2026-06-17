@@ -147,7 +147,7 @@
       line-height: 1.15;
     }
 
-    /* spiral placeholder */
+    /* spiral placeholder & animation styles */
     .spiral {
       display: flex;
       align-items: center;
@@ -155,7 +155,30 @@
       padding: 40px;
     }
 
-    .spiral svg { width: 180px; height: 180px; opacity: 0.85; }
+    .spiral svg { width: 180px; height: 180px; }
+
+    /* The Continuous Inward Motion CSS rules */
+    .hypnotic-ring {
+      transform-origin: center;
+      animation: hypnoticDrift 4.5s linear infinite; [cite: 66]
+    }
+
+    @keyframes hypnoticDrift {
+      0% {
+        transform: scale(1.15);
+        opacity: 0; [cite: 58]
+      }
+      8% {
+        opacity: 1;
+      }
+      92% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0; [cite: 58]
+      }
+    }
 
     /* ── PILLARS ── */
     .pillar {
@@ -362,7 +385,6 @@
 </head>
 <body>
 
-  <!-- ══ HERO ══ -->
   <section class="hero">
     <div class="hero-left-bar"></div>
     <div class="hero-wordmark">
@@ -386,7 +408,6 @@
     </div>
   </section>
 
-  <!-- ══ MANIFESTO ══ -->
   <section class="manifesto" style="display:block; padding:0;">
     <div class="manifesto-head-row">
       <h2>The Market Opportunity Is the Architectural Dismantling of Reality.</h2>
@@ -399,23 +420,22 @@
         <p class="italic-pull">We operate on the principle that if you stare at a word long enough, it loses its meaning.<br><br>We intend to do that to the human experience.</p>
       </div>
       <div class="spiral">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0a0a0a" stroke-width="1.2">
-          <circle cx="100" cy="100" r="90"/>
-          <circle cx="100" cy="100" r="75"/>
-          <circle cx="100" cy="100" r="61"/>
-          <circle cx="100" cy="100" r="49"/>
-          <circle cx="100" cy="100" r="38"/>
-          <circle cx="100" cy="100" r="28"/>
-          <circle cx="100" cy="100" r="19"/>
-          <circle cx="100" cy="100" r="11"/>
-          <circle cx="100" cy="100" r="5"/>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0a0a0a" stroke-width="1.3">
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: 0s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -0.5s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -1.0s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -1.5s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -2.0s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -2.5s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -3.0s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -3.5s;" />
+          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -4.0s;" />
           <circle cx="100" cy="100" r="1.5" fill="#0a0a0a"/>
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- ══ PILLAR IV: PROOF OF COMMERCE ══ -->
   <section id="proof-of-commerce" class="pillar">
     <div class="pillar-numeral">IV</div>
     <div class="pillar-content">
@@ -426,7 +446,6 @@
     </div>
   </section>
 
-  <!-- ══ VIDEO GRID ══ -->
   <section class="projects">
 
     <div class="project-card">
@@ -491,7 +510,6 @@
 
   </section>
 
-  <!-- ══ PILLAR I ══ -->
   <section class="pillar">
     <div class="pillar-numeral">I</div>
     <div class="pillar-content">
@@ -506,7 +524,6 @@
     </div>
   </section>
 
-  <!-- ══ PROJECT: PAPPAYAHTZI ══ -->
   <section style="padding: 48px 40px; border-bottom: var(--border);">
     <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(24px,3vw,40px); text-transform:uppercase; margin-bottom:24px;">
       Pappayahtzi: Solving the Infinite Mirror Problem
@@ -522,7 +539,6 @@
     </div>
   </section>
 
-  <!-- ══ PILLAR II ══ -->
   <section class="pillar">
     <div class="pillar-numeral">II</div>
     <div class="pillar-content">
@@ -533,7 +549,6 @@
     </div>
   </section>
 
-  <!-- ══ PROJECT: BALOOMERANG ══ -->
   <section style="display:grid; grid-template-columns:1fr 1fr; border-bottom: var(--border);">
     <div style="padding:48px 40px; border-right: var(--border);">
       <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(28px,3.5vw,52px); text-transform:uppercase; line-height:1; margin-bottom:24px;">Baloomerang™:<br>Atmospheric Return Technology™</div>
@@ -546,7 +561,6 @@
     </div>
   </section>
 
-  <!-- ══ DOG CLOCK ══ -->
   <section style="padding:0; border-bottom: var(--border);">
     <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(22px,3vw,40px); text-transform:uppercase; padding:36px 40px 0; line-height:1;">
       Human Time Is a Colonial Construct Incompatible with Biological Reality.
@@ -566,7 +580,6 @@
     </div>
   </section>
 
-  <!-- ══ PILLAR III ══ -->
   <section class="pillar">
     <div class="pillar-numeral">III</div>
     <div class="pillar-content">
@@ -577,7 +590,6 @@
     </div>
   </section>
 
-  <!-- ══ PROJECT CARDS ══ -->
   <section class="projects">
     <div class="project-card">
       <div class="project-card-label">Singular Utility Series</div>
@@ -618,7 +630,6 @@
     </div>
   </section>
 
-  <!-- ══ MISSION ══ -->
   <section class="mission">
     <div class="mission-label">The Mission</div>
     <div class="mission-text">
@@ -627,7 +638,6 @@
     <div class="mission-attribution">— The Board of Henry French Kissinger</div>
   </section>
 
-  <!-- ══ FOOTER ══ -->
   <footer>
     <div class="footer-wordmark">Henry French Kissinger</div>
     <div class="footer-sub">Confidential Strategy Deck. Do Not Distribute.</div>
