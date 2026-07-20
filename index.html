@@ -24,7 +24,6 @@
       overflow-x: hidden;
     }
 
-    /* ── GRID OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -38,7 +37,6 @@
       z-index: 0;
     }
 
-    /* ── SITE NAV ── */
     .site-nav {
       position: sticky;
       top: 0;
@@ -88,7 +86,6 @@
       .site-nav .nav-links a { font-size: 10.5px; }
     }
 
-    /* ── SECTIONS ── */
     section {
       position: relative;
       z-index: 1;
@@ -96,7 +93,6 @@
       overflow: hidden;
     }
 
-    /* ── HERO ── */
     .hero {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -139,7 +135,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* ── MANIFESTO ── */
     .manifesto {
       display: grid;
       grid-template-columns: 1fr 1fr 320px;
@@ -198,7 +193,6 @@
       line-height: 1.15;
     }
 
-    /* spiral placeholder & animation styles */
     .spiral {
       display: flex;
       align-items: center;
@@ -230,7 +224,6 @@
       }
     }
 
-    /* ── PILLARS ── */
     .pillar {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -293,7 +286,6 @@
       font-weight: 700;
     }
 
-    /* ── PROJECT CARDS ── */
     .projects {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -335,7 +327,6 @@
 
     .project-meta strong { font-weight: 700; }
 
-    /* ── ABOUT / PERSONNEL ── */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -359,7 +350,6 @@
       margin-bottom: 4px;
     }
 
-    /* ── MISSION ── */
     .mission {
       padding: 80px 48px;
       min-height: 60vh;
@@ -399,7 +389,6 @@
       border-top: var(--border);
     }
 
-    /* ── FOOTER ── */
     footer {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -424,7 +413,6 @@
       opacity: 0.5;
     }
 
-    /* ── DIVIDER RULE ── */
     .thick-rule {
       height: 4px;
       background: var(--black);
@@ -432,7 +420,6 @@
       margin: 20px 0;
     }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -441,7 +428,6 @@
     .hero-wordmark h1 { animation: fadeUp 0.7s ease both; }
     .hero-tagline     { animation: fadeUp 0.7s 0.2s ease both; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .hero { grid-template-columns: 60px 1fr; }
       .hero-wordmark { padding: 32px 24px; }
@@ -549,6 +535,18 @@
       <div class="project-card-title">Hugh's Season</div>
       <video
         src="videos/hughs-season.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
+      ></video>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-label">FantasyCaster — Campaign Spot IV</div>
+      <div class="project-card-title">BEACH</div>
+      <video
+        src="videos/beach.mp4"
         controls
         playsinline
         preload="metadata"
@@ -827,4 +825,3 @@
 
 </body>
 </html>
-
