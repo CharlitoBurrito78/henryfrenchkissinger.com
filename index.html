@@ -38,6 +38,56 @@
       z-index: 0;
     }
 
+    /* ── SITE NAV ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: var(--white);
+      border-bottom: var(--border);
+    }
+
+    .site-nav .nav-mark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .site-nav .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .site-nav .nav-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 3px;
+      transition: border-color 0.15s ease;
+    }
+
+    .site-nav .nav-links a:hover {
+      border-bottom-color: var(--black);
+    }
+
+    @media (max-width: 768px) {
+      .site-nav { padding: 14px 24px; }
+      .site-nav .nav-links { gap: 18px; }
+      .site-nav .nav-links a { font-size: 10.5px; }
+    }
+
     /* ── SECTIONS ── */
     section {
       position: relative;
@@ -51,7 +101,7 @@
       display: grid;
       grid-template-columns: 280px 1fr;
       grid-template-rows: 1fr auto;
-      min-height: 100vh;
+      min-height: calc(100vh - 60px);
       border-bottom: var(--border);
     }
 
@@ -285,6 +335,30 @@
 
     .project-meta strong { font-weight: 700; }
 
+    /* ── ABOUT / PERSONNEL ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 8px;
+    }
+
+    .about-person {
+      border-top: 1.5px solid rgba(10,10,10,0.15);
+      padding-top: 16px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .about-person strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
     /* ── MISSION ── */
     .mission {
       padding: 80px 48px;
@@ -378,12 +452,22 @@
       .pillar-numeral { font-size: 60px; }
       .projects { grid-template-columns: 1fr; }
       .project-card { border-right: none; border-bottom: var(--border); }
+      .about-grid { grid-template-columns: 1fr; }
       .mission { padding: 48px 24px; }
       footer { grid-template-columns: 1fr; gap: 8px; padding: 20px 24px; }
     }
   </style>
 </head>
 <body>
+
+  <nav class="site-nav">
+    <a href="#" class="nav-mark">HFK</a>
+    <div class="nav-links">
+      <a href="#proof-of-commerce">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
   <section class="hero">
     <div class="hero-left-bar"></div>
@@ -666,6 +750,27 @@
     </div>
   </section>
 
+  <section id="about" class="pillar">
+    <div class="pillar-numeral">V</div>
+    <div class="pillar-content">
+      <div class="pillar-label">About Us</div>
+      <div class="pillar-title">Defectors, Not Founders</div>
+      <div class="thick-rule"></div>
+      <p class="pillar-body">Henry French Kissinger is not run by executives. It is run by two men who spent years working professionally inside the industry — as writers, musicians, editors, and composers — before defecting from it entirely to build something with more friction and less compliance.</p>
+      <div class="about-grid">
+        <div class="about-person">
+          <strong>Charlie Wadhams</strong>
+          Writer. Musician. Editor. Composer. Defector.
+        </div>
+        <div class="about-person">
+          <strong>Brian Canning</strong>
+          Writer. Musician. Editor. Composer. Defector.
+        </div>
+      </div>
+      <p class="pillar-body" style="margin-top:24px; margin-bottom:0;">In permanent collaboration with sound designer <strong>Michael Anastasi</strong>, whose job is to make the friction audible.</p>
+    </div>
+  </section>
+
   <section class="mission">
     <div class="mission-label">The Mission</div>
     <div class="mission-text">
@@ -674,7 +779,7 @@
     <div class="mission-attribution">— The Board of Henry French Kissinger</div>
   </section>
 
-  <section style="display:grid; grid-template-columns:280px 1fr; border-bottom: var(--border);">
+  <section id="contact" style="display:grid; grid-template-columns:280px 1fr; border-bottom: var(--border);">
     <div style="border-right: var(--border); padding: 60px 48px;">
       <div style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.5; margin-bottom:16px;">Initiate Contact</div>
       <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,5vw,72px); text-transform:uppercase; line-height:0.9;">Make<br>Contact.</div>
@@ -722,3 +827,4 @@
 
 </body>
 </html>
+
