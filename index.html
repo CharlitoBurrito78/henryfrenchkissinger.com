@@ -3,453 +3,481 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Henry French Kissinger — The Friction of Existence.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <title>Henry French Kissinger</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --black: #0a0a0a;
+    :root { 
+      --black: #0a0a0a; 
       --white: #f5f4f0;
-      --border: 2.5px solid #0a0a0a;
+      --border: 2.5px solid #0a0a0a;   
+    } 
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html, body {
-      background: var(--white);
-      color: var(--black);
+    html, body { 
+      background: var(--white); 
+      color: var(--black);     
       font-family: 'Space Mono', monospace;
-      overflow-x: hidden;
+      overflow-x: hidden; 
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+    body::before { 
+      content: ''; 
+      position: fixed; 
+      inset: 0; 
       pointer-events: none;
-      background-image:
-        linear-gradient(var(--black) 1px, transparent 1px),
-        linear-gradient(90deg, var(--black) 1px, transparent 1px);
+      background-image: 
+        linear-gradient(var(--black) 1px, transparent 1px), 
+        linear-gradient(90deg, var(--black) 1px, transparent 1px); 
       background-size: 80px 80px;
-      opacity: 0.04;
-      z-index: 0;
+      opacity: 0.04; 
+      z-index: 0; 
     }
 
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      display: flex;
-      align-items: center;
+    /* ── NAVIGATION ── */
+    .site-nav { 
+      position: sticky; 
+      top: 0; 
+      z-index: 30; 
+      display: flex; 
+      align-items: center; 
       justify-content: space-between;
       padding: 18px 48px;
-      background: var(--white);
-      border-bottom: var(--border);
-    }
+      background: var(--white); 
+      border-bottom: var(--border); 
+    } 
 
-    .site-nav .nav-mark {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 18px;
+    .site-nav .nav-mark { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: 18px; 
       letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--black);
+      text-transform: uppercase; 
+      text-decoration: none; 
+      color: var(--black); 
     }
 
-    .site-nav .nav-links {
-      display: flex;
+    .site-nav .nav-links { 
+      display: flex; 
       gap: 32px;
-    }
+    } 
 
-    .site-nav .nav-links a {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .site-nav .nav-links a { 
+      font-family: 'Space Mono', monospace; 
+      font-size: 12px; 
+      letter-spacing: 0.1em; 
+      text-transform: uppercase;   
       text-decoration: none;
-      color: var(--black);
-      border-bottom: 1.5px solid transparent;
-      padding-bottom: 3px;
-      transition: border-color 0.15s ease;
-    }
+      color: var(--black); 
+      border-bottom: 1.5px solid transparent; 
+      padding-bottom: 3px; 
+      transition: border-color 0.15s ease; 
+    } 
 
-    .site-nav .nav-links a:hover {
+    .site-nav .nav-links a:hover { 
       border-bottom-color: var(--black);
     }
 
-    @media (max-width: 768px) {
-      .site-nav { padding: 14px 24px; }
-      .site-nav .nav-links { gap: 18px; }
-      .site-nav .nav-links a { font-size: 10.5px; }
-    }
+    /* ── GENERAL SECTIONS ── */
+    section { 
+      position: relative; 
+      z-index: 1; 
+      border-bottom: var(--border); 
+      overflow: hidden; 
+    } 
 
-    section {
-      position: relative;
-      z-index: 1;
-      border-bottom: var(--border);
-      overflow: hidden;
-    }
-
-    .hero {
+    /* ── HERO ── */
+    .hero { 
       display: grid;
-      grid-template-columns: 280px 1fr;
-      grid-template-rows: 1fr auto;
-      min-height: calc(100vh - 60px);
+      grid-template-columns: 280px 1fr; 
+      grid-template-rows: 1fr auto; 
+      min-height: calc(100vh - 60px); 
       border-bottom: var(--border);
     }
 
-    .hero-left-bar {
-      grid-row: 1 / 3;
-      border-right: var(--border);
+    .hero-left-bar { 
+      grid-row: 1 / 3; 
+      border-right: var(--border); 
     }
 
-    .hero-wordmark {
+    .hero-wordmark { 
       padding: 60px 48px 48px;
-      grid-column: 2;
+      grid-column: 2; 
     }
 
-    .hero-wordmark h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(72px, 10vw, 140px);
+    .hero-wordmark h1 { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: clamp(72px, 10vw, 140px); 
       line-height: 0.9;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
+      letter-spacing: -0.01em; 
+      text-transform: uppercase; 
+      animation: fadeUp 0.7s ease both;
     }
 
-    .hero-tagline {
-      grid-column: 2;
-      border-top: var(--border);
-      padding: 20px 48px;
-      display: flex;
-      align-items: center;
+    .hero-tagline { 
+      grid-column: 2; 
+      border-top: var(--border); 
+      padding: 20px 48px; 
+      display: flex; 
+      align-items: center; 
       justify-content: flex-end;
-    }
+      animation: fadeUp 0.7s 0.2s ease both;
+    } 
 
-    .hero-tagline span {
-      font-family: 'Space Mono', monospace;
-      font-size: 13px;
+    .hero-tagline span { 
+      font-family: 'Space Mono', monospace; 
+      font-size: 13px; 
       letter-spacing: 0.04em;
     }
 
-    .manifesto {
-      display: grid;
-      grid-template-columns: 1fr 1fr 320px;
-      gap: 0;
+    /* ── MANIFESTO ── */
+    .manifesto { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr 320px;   
+      gap: 0; 
       min-height: 340px;
+    } 
+
+    .manifesto-block { 
+      padding: 48px 40px; 
+      border-right: var(--border); 
     }
 
-    .manifesto-block {
-      padding: 48px 40px;
-      border-right: var(--border);
+    .manifesto-block:last-child { 
+      border-right: none; 
+    } 
+
+    .manifesto-head-row { 
+      grid-column: 1 / -1; 
+      border-bottom: var(--border); 
+      padding: 36px 40px; 
     }
 
-    .manifesto-block:last-child { border-right: none; }
-
-    .manifesto-headline {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(28px, 3.5vw, 46px);
+    .manifesto-head-row h2 { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: clamp(28px, 3.5vw, 48px); 
+      text-transform: uppercase; 
       line-height: 1;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-      grid-column: 1 / -1;
-      padding: 40px 40px 0;
-      border-bottom: none;
-    }
+    } 
 
-    .full-width-head {
-      grid-column: 1 / -1;
-      padding: 40px 40px 0;
-    }
+    .body-text { 
+      font-size: 13px; 
+      line-height: 1.75; 
+    } 
 
-    .manifesto-head-row {
-      grid-column: 1 / -1;
-      border-bottom: var(--border);
-      padding: 36px 40px;
-    }
-
-    .manifesto-head-row h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(28px, 3.5vw, 48px);
-      text-transform: uppercase;
-      line-height: 1;
-    }
-
-    .body-text {
-      font-size: 13px;
-      line-height: 1.75;
-    }
-
-    .italic-pull {
-      font-family: 'Barlow Condensed', sans-serif;
+    .italic-pull { 
+      font-family: 'Barlow Condensed', sans-serif; 
       font-weight: 700;
-      font-style: italic;
-      font-size: clamp(22px, 2.8vw, 34px);
-      line-height: 1.15;
-    }
+      font-style: italic; 
+      font-size: clamp(22px, 2.8vw, 34px); 
+      line-height: 1.15; 
+    } 
 
-    .spiral {
-      display: flex;
-      align-items: center;
+    .spiral { 
+      display: flex; 
+      align-items: center; 
       justify-content: center;
-      padding: 40px;
+      padding: 40px; 
     }
 
-    .spiral svg { width: 180px; height: 180px; }
+    .spiral svg { 
+      width: 180px; 
+      height: 180px; 
+    } 
 
-    .hypnotic-ring {
-      transform-origin: center;
+    .hypnotic-ring { 
+      transform-origin: center; 
       animation: hypnoticDrift 4.5s linear infinite;
+    } 
+
+    @keyframes hypnoticDrift { 
+      0% { transform: scale(1.15); opacity: 0; } 
+      8% { opacity: 1; } 
+      92% { opacity: 1; } 
+      100% { transform: scale(0); opacity: 0; } 
+    } 
+
+    /* ── PILLAR ── */
+    .pillar { 
+      display: grid; 
+      grid-template-columns: 220px 1fr; 
+      min-height: 280px; 
     }
 
-    @keyframes hypnoticDrift {
-      0% {
-        transform: scale(1.15);
-        opacity: 0;
-      }
-      8% {
-        opacity: 1;
-      }
-      92% {
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0);
-        opacity: 0;
-      }
-    }
-
-    .pillar {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      min-height: 280px;
-    }
-
-    .pillar-numeral {
-      border-right: var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif;
+    .pillar-numeral { 
+      border-right: var(--border); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-family: 'Barlow Condensed', sans-serif; 
       font-weight: 900;
-      font-size: clamp(120px, 18vw, 220px);
-      line-height: 1;
-      color: var(--black);
-      padding: 32px;
-      -webkit-text-stroke: 3px var(--black);
+      font-size: clamp(120px, 18vw, 220px); 
+      line-height: 1; 
+      padding: 32px; 
+      -webkit-text-stroke: 3px var(--black); 
       color: transparent;
+    } 
+
+    .pillar-content { 
+      padding: 48px 48px; 
     }
 
-    .pillar-content {
-      padding: 48px 48px;
-    }
-
-    .pillar-label {
-      font-family: 'Space Mono', monospace;
+    .pillar-label { 
+      font-family: 'Space Mono', monospace; 
       font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      opacity: 0.5;
+      letter-spacing: 0.1em; 
+      text-transform: uppercase;   
+      margin-bottom: 8px; 
+      opacity: 0.5; 
     }
 
-    .pillar-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(28px, 3.5vw, 48px);
-      text-transform: uppercase;
+    .pillar-title { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: clamp(28px, 3.5vw, 48px); 
+      text-transform: uppercase; 
       line-height: 1;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: var(--border);
-    }
+      margin-bottom: 24px;   
+      padding-bottom: 16px; 
+      border-bottom: var(--border); 
+    } 
 
     .pillar-body {
-      font-size: 13px;
-      line-height: 1.8;
+      font-size: 13px; 
+      line-height: 1.8; 
       margin-bottom: 24px;
     }
 
-    .pillar-list {
-      list-style: none;
-      font-size: 13px;
+    .pillar-list { 
+      list-style: none; 
+      font-size: 13px; 
       line-height: 2;
+    } 
+
+    .pillar-list li::before { 
+      content: attr(data-num) '. '; 
+      font-weight: 700; 
     }
 
-    .pillar-list li::before {
-      content: attr(data-num) '. ';
-      font-weight: 700;
+    /* ── WORK SECTION TABS & GRID ── */
+    .work-section-header {
+      padding: 40px 40px 20px;
+      border-bottom: var(--border);
+      background: var(--white);
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .project-card {
-      border-right: var(--border);
-      padding: 48px 40px;
-    }
-
-    .project-card:last-child { border-right: none; }
-    .project-card:nth-child(n+3) { border-top: var(--border); }
-
-    .project-card-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.45;
-      margin-bottom: 12px;
-    }
-
-    .project-card-title {
+    .work-section-header h2 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: clamp(22px, 2.5vw, 36px);
+      font-size: clamp(32px, 4vw, 56px);
       text-transform: uppercase;
       line-height: 1;
-      margin-bottom: 20px;
     }
 
-    .project-meta {
-      font-size: 12px;
-      line-height: 2;
-      border-top: 1.5px solid rgba(10,10,10,0.15);
-      padding-top: 16px;
-      margin-top: 16px;
-    }
-
-    .project-meta strong { font-weight: 700; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-top: 8px;
-    }
-
-    .about-person {
-      border-top: 1.5px solid rgba(10,10,10,0.15);
-      padding-top: 16px;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    .about-person strong {
-      display: block;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 18px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .mission {
-      padding: 80px 48px;
-      min-height: 60vh;
+    .work-tabs {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      border-bottom: var(--border);
+      background: var(--white);
+    }
+
+    .tab-btn {
+      flex: 1;
+      min-width: 140px;
+      padding: 18px 24px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--black);
+      border: none;
+      border-right: var(--border);
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .tab-btn:last-child {
+      border-right: none;
+    }
+
+    .tab-btn:hover {
+      background: rgba(10, 10, 10, 0.06);
+    }
+
+    .tab-btn.active {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .projects { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+    }
+
+    .project-card { 
+      border-right: var(--border); 
+      border-bottom: var(--border);
+      padding: 48px 40px; 
+      box-sizing: border-box;
+      transition: opacity 0.25s ease;
+    } 
+
+    .project-card:nth-child(2n) { 
+      border-right: none; 
+    }
+
+    .project-card.hidden { 
+      display: none; 
+    }
+
+    .project-card-label { 
+      font-family: 'Space Mono', monospace;
+      font-size: 10px; 
+      letter-spacing: 0.12em; 
+      text-transform: uppercase; 
+      opacity: 0.5; 
+      margin-bottom: 12px; 
+    } 
+
+    .project-card-title { 
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; 
+      font-size: clamp(22px, 2.5vw, 36px); 
+      text-transform: uppercase; 
+      line-height: 1;
+      margin-bottom: 20px; 
+    }
+
+    .project-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-top: 16px;
+      border: 2.5px solid var(--black);
+      display: block;
+      background: var(--black);
+    }
+
+    .project-meta { 
+      font-size: 12px; 
+      line-height: 2; 
+      border-top: 1.5px solid rgba(10,10,10,0.15); 
+      padding-top: 16px; 
+      margin-top: 16px;
+    } 
+
+    .project-meta strong { 
+      font-weight: 700; 
+    } 
+
+    /* ── MISSION ── */
+    .mission { 
+      padding: 80px 48px; 
+      min-height: 60vh; 
+      display: flex; 
+      flex-direction: column; 
       justify-content: space-between;
     }
 
-    .mission-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-      padding-bottom: 16px;
+    .mission-label { 
+      font-family: 'Space Mono', monospace; 
+      font-size: 11px; 
+      letter-spacing: 0.1em; 
+      text-transform: uppercase;   
+      margin-bottom: 32px; 
+      padding-bottom: 16px; 
       border-bottom: var(--border);
-    }
+    } 
 
-    .mission-text {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(48px, 8vw, 120px);
-      text-transform: uppercase;
+    .mission-text { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: clamp(48px, 8vw, 120px);   
+      text-transform: uppercase; 
       line-height: 0.92;
-      flex: 1;
-      display: flex;
-      align-items: center;
+      flex: 1; 
+      display: flex; 
+      align-items: center; 
     }
 
-    .mission-attribution {
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: right;
-      margin-top: 40px;
-      padding-top: 20px;
+    .mission-attribution { 
+      font-size: 11px; 
+      letter-spacing: 0.08em;   
+      text-transform: uppercase; 
+      text-align: right; 
+      margin-top: 40px;   
+      padding-top: 20px; 
       border-top: var(--border);
-    }
+    } 
 
-    footer {
-      display: grid;
-      grid-template-columns: 1fr auto;
+    /* ── FOOTER ── */
+    footer { 
+      display: grid; 
+      grid-template-columns: 1fr auto; 
       align-items: center;
-      padding: 24px 48px;
-      border-top: var(--border);
-      position: relative;
+      padding: 24px 48px; 
+      border-top: var(--border); 
+      position: relative; 
       z-index: 1;
+    } 
+
+    .footer-wordmark { 
+      font-family: 'Barlow Condensed', sans-serif; 
+      font-weight: 900; 
+      font-size: 22px; 
+      text-transform: uppercase; 
+      letter-spacing: 0.02em; 
     }
 
-    .footer-wordmark {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 22px;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-
-    .footer-sub {
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      opacity: 0.5;
-    }
-
-    .thick-rule {
-      height: 4px;
-      background: var(--black);
-      width: 100%;
-      margin: 20px 0;
-    }
+    .footer-sub { 
+      font-size: 11px; 
+      letter-spacing: 0.06em; 
+      opacity: 0.5; 
+    } 
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(24px); } 
+      to   { opacity: 1; transform: translateY(0); } 
     }
 
-    .hero-wordmark h1 { animation: fadeUp 0.7s ease both; }
-    .hero-tagline     { animation: fadeUp 0.7s 0.2s ease both; }
-
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 60px 1fr; }
-      .hero-wordmark { padding: 32px 24px; }
-      .hero-tagline  { padding: 16px 24px; }
-      .manifesto { grid-template-columns: 1fr; }
-      .manifesto-block { border-right: none; border-bottom: var(--border); }
-      .pillar { grid-template-columns: 80px 1fr; }
-      .pillar-numeral { font-size: 60px; }
-      .projects { grid-template-columns: 1fr; }
-      .project-card { border-right: none; border-bottom: var(--border); }
-      .about-grid { grid-template-columns: 1fr; }
-      .mission { padding: 48px 24px; }
-      footer { grid-template-columns: 1fr; gap: 8px; padding: 20px 24px; }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) { 
+      .site-nav { padding: 14px 24px; } 
+      .site-nav .nav-links { gap: 18px; } 
+      .site-nav .nav-links a { font-size: 10.5px; } 
+      .hero { grid-template-columns: 60px 1fr; } 
+      .hero-wordmark { padding: 32px 24px; } 
+      .hero-tagline { padding: 16px 24px; } 
+      .manifesto { grid-template-columns: 1fr; } 
+      .manifesto-block { border-right: none; border-bottom: var(--border); } 
+      .pillar { grid-template-columns: 80px 1fr; } 
+      .pillar-numeral { font-size: 60px; } 
+      .tab-btn { border-right: none; border-bottom: var(--border); flex: 100%; }
+      .projects { grid-template-columns: 1fr; } 
+      .project-card { border-right: none; border-bottom: var(--border); } 
+      .mission { padding: 48px 24px; } 
+      footer { grid-template-columns: 1fr; gap: 8px; padding: 20px 24px; } 
     }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
-    <a href="#" class="nav-mark">HFK</a>
+    <a href="#" class="nav-mark">Henry French Kissinger</a>
     <div class="nav-links">
-      <a href="#proof-of-commerce">Work</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -458,370 +486,147 @@
   <section class="hero">
     <div class="hero-left-bar"></div>
     <div class="hero-wordmark">
-      <h1>Henry<br>French<br>Kissinger</h1>
+      <h1>Henry French Kissinger</h1>
     </div>
     <div class="hero-tagline">
-      <a href="#proof-of-commerce"
-         style="font-family:'Space Mono',monospace;
-                font-size:15px;
-                letter-spacing:0.08em;
-                text-transform:uppercase;
-                font-weight:700;
-                text-decoration:none;
-                color:var(--black);
-                border-bottom:1.5px solid var(--black);
-                padding-bottom:2px;
-                margin-right:auto;">
-        Recent Work ↓
-      </a>
-      <span>A Creative Collective for the Post-Authentic Era.</span>
+      <span>Creative Direction & Production</span>
     </div>
   </section>
 
-  <section class="manifesto" style="display:block; padding:0;">
+  <section class="manifesto" id="about">
     <div class="manifesto-head-row">
-      <h2>The Market Opportunity Is the Architectural Dismantling of Reality.</h2>
+      <h2>Manifesto</h2>
     </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr 300px; border-top: none;">
-      <div class="manifesto-block">
-        <p class="body-text">In a global landscape saturated with meaning, there is no greater luxury than the relief of the recursive. Henry French Kissinger projects do not exist to solve problems; they exist to document the friction of their own existence.</p>
+    <div class="manifesto-block">
+      <p class="body-text">
+        We build visual campaigns designed to leave an impression. No fluff, no wasted frames—just sharp creative strategy and uncompromised quality.
+      </p>
+    </div>
+    <div class="manifesto-block">
+      <p class="italic-pull">
+        "Bold ideas executed with brutal precision."
+      </p>
+    </div>
+    <div class="manifesto-block spiral">
+      <svg viewBox="0 0 100 100">
+        <circle class="hypnotic-ring" cx="50" cy="50" r="40" fill="none" stroke="#0a0a0a" stroke-width="3" />
+        <circle class="hypnotic-ring" cx="50" cy="50" r="28" fill="none" stroke="#0a0a0a" stroke-width="3" style="animation-delay: 0.8s;" />
+        <circle class="hypnotic-ring" cx="50" cy="50" r="16" fill="none" stroke="#0a0a0a" stroke-width="3" style="animation-delay: 1.6s;" />
+      </svg>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="work-section-header">
+      <h2>Selected Work</h2>
+    </div>
+
+    <div class="work-tabs">
+      <button class="tab-btn active" onclick="filterWork('all', this)">ALL</button>
+      <button class="tab-btn" onclick="filterWork('campaigns', this)">CAMPAIGNS</button>
+      <button class="tab-btn" onclick="filterWork('specs', this)">SPECS</button>
+      <button class="tab-btn" onclick="filterWork('small-business', this)">SMALL BUSINESS</button>
+      <button class="tab-btn" onclick="filterWork('start-ups', this)">START UPS</button>
+    </div>
+
+    <div class="projects">
+
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Campaign Spot IV</div>
+        <div class="project-card-title">BALOOMERANG</div>
+        <video class="project-video" src="videos/EDIT%209.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Henry French Kissinger</div>
       </div>
-      <div class="manifesto-block">
-        <p class="italic-pull">We operate on the principle that if you stare at a word long enough, it loses its meaning.<br><br>We intend to do that to the human experience.</p>
+
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Fantasy Caster — Campaign Trailer</div>
+        <div class="project-card-title">Hugh's Season</div>
+        <video class="project-video" src="videos/hughs-season.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Fantasy Caster</div>
       </div>
-      <div class="spiral">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0a0a0a" stroke-width="1.3">
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: 0s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -0.5s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -1.0s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -1.5s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -2.0s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -2.5s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -3.0s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -3.5s;" />
-          <circle class="hypnotic-ring" cx="100" cy="100" r="85" style="animation-delay: -4.0s;" />
-          <circle cx="100" cy="100" r="1.5" fill="#0a0a0a"/>
-        </svg>
+
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Fantasy Caster — Campaign Spot IV</div>
+        <div class="project-card-title">BEACH</div>
+        <video class="project-video" src="videos/beach.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Fantasy Caster</div>
       </div>
-    </div>
-  </section>
 
-  <section id="proof-of-commerce" class="pillar">
-    <div class="pillar-numeral">IV</div>
-    <div class="pillar-content">
-      <div class="pillar-label">The Work</div>
-      <div class="pillar-title">Artifacts of Contact</div>
-      <div class="thick-rule"></div>
-      <p class="pillar-body">Proof that something happened.</p>
-    </div>
-  </section>
-
-  <section class="projects">
-
-    <div class="project-card">
-      <div class="project-card-label">Henry French Kissinger — Campaign Spot IV</div>
-      <div class="project-card-title">BALOOMERANG</div>
-      <video
-        src="videos/EDIT%209.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">FantasyCaster — Campaign Trailer</div>
-      <div class="project-card-title">Hugh's Season</div>
-      <video
-        src="videos/hughs-season.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">FantasyCaster — Campaign Spot IV</div>
-      <div class="project-card-title">BEACH</div>
-      <video
-        src="videos/beach.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">Henry French Kissinger — Spec Spot</div>
-      <div class="project-card-title">The Skipper</div>
-      <video
-        src="videos/skipper.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">FantasyCaster — Campaign Spot I</div>
-      <div class="project-card-title">Doctor Visit</div>
-      <video
-        src="videos/doctor-visit.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">FantasyCaster — Campaign Spot II</div>
-      <div class="project-card-title">We Need to Talk</div>
-      <video
-        src="videos/we-need-to-talk.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">FantasyCaster — Campaign Spot III</div>
-      <div class="project-card-title">Funeral</div>
-      <video
-        src="videos/funeral.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">Vamos Watu — Brand Spot</div>
-      <div class="project-card-title">Cowboy</div>
-      <video
-        src="videos/cowboy.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:16/9; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-    <div class="project-card">
-      <div class="project-card-label">Nissan — Brand Spot</div>
-      <div class="project-card-title">Nissan</div>
-      <video
-        src="videos/NISSAN%20CILANTRO%20EDIT%201.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="width:100%; aspect-ratio:1/1; object-fit:cover; margin-top:16px; border: 2.5px solid #0a0a0a; display:block;"
-      ></video>
-    </div>
-
-  </section>
-
-  <section class="pillar">
-    <div class="pillar-numeral">I</div>
-    <div class="pillar-content">
-      <div class="pillar-label">Strategic Pillar I</div>
-      <div class="pillar-title">The Ouroboros Effect</div>
-      <div class="thick-rule"></div>
-      <p class="pillar-body">Traditional media models rely on a subject. We rely on the observation of the observer. By shifting the lens, we eliminate the need for the original object.</p>
-      <ul class="pillar-list">
-        <li data-num="01">From Subject to Reflection.</li>
-        <li data-num="02">From Reflection to Recursion.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="padding: 48px 40px; border-bottom: var(--border);">
-    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(24px,3vw,40px); text-transform:uppercase; margin-bottom:24px;">
-      Pappayahtzi: Solving the Infinite Mirror Problem
-    </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
-      <p class="body-text">We have enlisted Ron Galella Jr. to lead a defected army of legendary paparazzi. Their mandate is not to photograph celebrities, but to photograph the paparazzi who are photographing the paparazzi.</p>
-      <div class="body-text" style="font-family:'Space Mono',monospace; font-size:11px; line-height:2; border-left: var(--border); padding-left:32px;">
-        <div>Scenario: 47 photographers in one driveway.</div>
-        <div>Outcome: Subject obsolescence.</div>
-        <div>Metric: 100% Reflection / 0% Object.</div>
-        <div style="margin-top:16px; font-weight:700;">FIG 1.1: RECURSIVE SURVEILLANCE SPIRAL</div>
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Fantasy Caster — Campaign Spot I</div>
+        <div class="project-card-title">Doctor Visit</div>
+        <video class="project-video" src="videos/doctor-visit.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Fantasy Caster</div>
       </div>
-    </div>
-  </section>
 
-  <section class="pillar">
-    <div class="pillar-numeral">II</div>
-    <div class="pillar-content">
-      <div class="pillar-label">Strategic Pillar II</div>
-      <div class="pillar-title">Challenging Colonial Constructs of Time &amp; Physics</div>
-      <div class="thick-rule"></div>
-      <p class="pillar-body">Standard definitions of 'return' and 'time' are flexible variables. We reject linear progression in favor of geological timeframes and vertical oscillation.</p>
-    </div>
-  </section>
-
-  <section style="display:grid; grid-template-columns:1fr 1fr; border-bottom: var(--border);">
-    <div style="padding:48px 40px; border-right: var(--border);">
-      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(28px,3.5vw,52px); text-transform:uppercase; line-height:1; margin-bottom:24px;">Baloomerang™:<br>Atmospheric Return Technology™</div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,5vw,72px); text-transform:uppercase;">Eventually.</div>
-    </div>
-    <div style="padding:48px 40px;">
-      <div class="body-text" style="margin-bottom:16px;"><strong>Problem:</strong> Traditional boomerangs are aggressive. They demand athletic competence and immediate results.</div>
-      <div class="body-text" style="margin-bottom:16px;"><strong>Solution:</strong> A helium-filled, latex vessel designed for the patient. A subversion of the return-arc.</div>
-      <div class="body-text"><strong>Spec:</strong> It goes away. It may return in a different zip code, or a different decade. 'Return' is redefined as a geological timeframe.</div>
-    </div>
-  </section>
-
-  <section style="padding:0; border-bottom: var(--border);">
-    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(22px,3vw,40px); text-transform:uppercase; padding:36px 40px 0; line-height:1;">
-      Human Time Is a Colonial Construct Incompatible with Biological Reality.
-    </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; border-top: var(--border); margin-top:32px;">
-      <div style="padding:40px; border-right: var(--border); font-size:12px; line-height:2; font-family:'Space Mono',monospace;">
-        <div style="margin-bottom:12px;"><strong>THE INSIGHT:</strong> THE 'X7' RULE IS CRUDE AND INACCURATE. VETERINARY SCIENCE ESTABLISHES THAT CANINE AGING IS NON-LINEAR.</div>
-        <div><strong>THE TECH:</strong> THE DOG CLOCK™ IS A PRECISION CHRONOMETRIC DEVICE UTILIZING A PROPRIETARY ALGORITHMIC OVERLAY.</div>
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Fantasy Caster — Campaign Spot II</div>
+        <div class="project-card-title">We Need to Talk</div>
+        <video class="project-video" src="videos/we-need-to-talk.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Fantasy Caster</div>
       </div>
-      <div style="padding:40px; font-size:12px; line-height:2; font-family:'Space Mono',monospace;">
-        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:20px; text-transform:uppercase; margin-bottom:16px;">The Three-Tier Aging Algorithm</div>
-        <div><strong>TIER 1</strong> (0–365 Days): 15:1 Acceleration Rate</div>
-        <div><strong>TIER 2</strong> (366–730 Days): 9:1 Stepped Reduction</div>
-        <div><strong>TIER 3</strong> (731+ Days): 5:1 Stabilized Rate</div>
-        <div style="margin-top:16px; border-top:1.5px solid rgba(10,10,10,0.15); padding-top:12px;"><strong>FEATURE:</strong> Holiday Synchronization Module (HSM). Subjects experience Christmas approximately 7 times per solar year.</div>
+
+      <div class="project-card" data-category="campaigns">
+        <div class="project-card-label">Fantasy Caster — Campaign Spot III</div>
+        <div class="project-card-title">Funeral</div>
+        <video class="project-video" src="videos/funeral.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Fantasy Caster</div>
       </div>
+
+      <div class="project-card" data-category="specs">
+        <div class="project-card-label">Spec Spot</div>
+        <div class="project-card-title">The Skipper</div>
+        <video class="project-video" src="videos/skipper.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Category:</strong> Spec Commercial</div>
+      </div>
+
+      <div class="project-card" data-category="small-business">
+        <div class="project-card-label">Brand Spot</div>
+        <div class="project-card-title">Cowboy</div>
+        <video class="project-video" src="videos/cowboy.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Vamos Watu</div>
+      </div>
+
+      <div class="project-card" data-category="start-ups">
+        <div class="project-card-label">Brand Spot</div>
+        <div class="project-card-title">Nissan Cilantro</div>
+        <video class="project-video" src="videos/NISSAN%20CILANTRO%20EDIT%201.mp4" controls playsinline preload="metadata"></video>
+        <div class="project-meta"><strong>Client:</strong> Nissan</div>
+      </div>
+
     </div>
   </section>
 
-  <section class="pillar">
-    <div class="pillar-numeral">III</div>
-    <div class="pillar-content">
-      <div class="pillar-label">Strategic Pillar III</div>
-      <div class="pillar-title">Somatic Subversion &amp; the Singular Utility Series</div>
-      <div class="thick-rule"></div>
-      <p class="pillar-body">We seek the radical pursuit of killing two birds with one very heavy stone. We remove the competitive metrics of 'the score' and 'the choice' to reveal pure utility.</p>
-    </div>
-  </section>
-
-  <section class="projects">
-    <div class="project-card">
-      <div class="project-card-label">Singular Utility Series</div>
-      <div class="project-card-title">The Message Therapist: Dual-Discipline Somatic Processing</div>
-      <p class="body-text">Replacing the analyst's leather chaise with the sterile, vinyl topography of a massage table.</p>
-      <div class="project-meta">
-        <div><strong>Principal:</strong> Dr. Franz Kissinger, PhD (Stanford), LMT (Swedish Institute).</div>
-        <div><strong>Innovation:</strong> Structural Elegance + Gig-Economy Efficiency → Life-Saving Authority.</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-card-label">Singular Utility Series</div>
-      <div class="project-card-title">No Dice: Non-Numerical Kinetic Randomizers</div>
-      <p class="body-text">A game for children where the dice have no numbers. Just white.</p>
-      <div class="project-meta">
-        <div><strong>Framework:</strong> You do not roll to win. You roll to see the dice tumble.</div>
-        <div><strong>Outcome:</strong> There is no score. There are no losers. Pure kinetic joy.</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-card-label">Vertical Oscillation Protocol</div>
-      <div class="project-card-title">The Skipper: Efficiency vs. Value</div>
-      <p class="body-text">The first human traversal of the United States via skipping. 2,448 miles.</p>
-      <div class="project-meta">
-        <div><strong>Subject:</strong> Cornelius Saltzmann.</div>
-        <div><strong>Insight:</strong> Skipping is a gate of joy, yet Saltzmann is a man of profound sorrow.</div>
-        <div><strong>Strategic Value:</strong> The most inefficient way to travel, which makes it the only way worth filming.</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-card-label">Post-Authentic Era</div>
-      <div class="project-card-title">Henry French Kissinger — The Friction of Existence.</div>
-      <p class="body-text">Projects do not exist to solve problems. They exist to document the friction of their own existence.</p>
-      <div class="project-meta">
-        <div><strong>Status:</strong> Ongoing.</div>
-        <div><strong>Metric:</strong> 100% Reflection / 0% Object.</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="pillar">
-    <div class="pillar-numeral">V</div>
-    <div class="pillar-content">
-      <div class="pillar-label">About Us</div>
-      <div class="pillar-title">Defectors, Not Founders</div>
-      <div class="thick-rule"></div>
-      <p class="pillar-body">Henry French Kissinger is not run by executives. It is run by two men who spent years working professionally inside the industry — as writers, musicians, editors, and composers — before defecting from it entirely to build something with more friction and less compliance.</p>
-      <div class="about-grid">
-        <div class="about-person">
-          <strong>Charlie Wadhams</strong>
-          Writer. Musician. Editor. Composer. Defector.
-        </div>
-        <div class="about-person">
-          <strong>Brian Canning</strong>
-          Writer. Musician. Editor. Composer. Defector.
-        </div>
-      </div>
-      <p class="pillar-body" style="margin-top:24px; margin-bottom:0;">In permanent collaboration with sound designer <strong>Michael Anastasi</strong>, whose job is to make the friction audible.</p>
-    </div>
-  </section>
-
-  <section class="mission">
-    <div class="mission-label">The Mission</div>
-    <div class="mission-text">
-      We are not here to create content. We are here to create a loop so tight that the audience disappears.
-    </div>
-    <div class="mission-attribution">— The Board of Henry French Kissinger</div>
-  </section>
-
-  <section id="contact" style="display:grid; grid-template-columns:280px 1fr; border-bottom: var(--border);">
-    <div style="border-right: var(--border); padding: 60px 48px;">
-      <div style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.5; margin-bottom:16px;">Initiate Contact</div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,5vw,72px); text-transform:uppercase; line-height:0.9;">Make<br>Contact.</div>
-    </div>
-    <div style="padding: 60px 48px;">
-      <form
-        action="https://formspree.io/f/xlgkqnnr"
-        method="POST"
-        style="display:flex; flex-direction:column; gap:24px;"
-      >
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <label style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.5;">Your Email</label>
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="your@email.com"
-            style="font-family:'Space Mono',monospace; font-size:13px; padding:14px 16px; border: var(--border); background:transparent; color:var(--black); outline:none; width:100%;"
-          />
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <label style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.5;">Your Message</label>
-          <textarea
-            name="message"
-            required
-            placeholder="Describe the friction of your existence."
-            rows="6"
-            style="font-family:'Space Mono',monospace; font-size:13px; padding:14px 16px; border: var(--border); background:transparent; color:var(--black); outline:none; resize:vertical; width:100%;"
-          ></textarea>
-        </div>
-        <div>
-          <button
-            type="submit"
-            style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:18px; text-transform:uppercase; letter-spacing:0.05em; padding:16px 48px; background:var(--black); color:var(--white); border:none; cursor:pointer;"
-          >Deliver →</button>
-        </div>
-      </form>
-    </div>
+  <section class="mission" id="contact">
+    <div class="mission-label">Direct Line</div>
+    <div class="mission-text">Let's build something impossible.</div>
+    <div class="mission-attribution">© Henry French Kissinger</div>
   </section>
 
   <footer>
     <div class="footer-wordmark">Henry French Kissinger</div>
-    <div class="footer-sub">Confidential Strategy Deck. Do Not Distribute.</div>
+    <div class="footer-sub">All Rights Reserved</div>
   </footer>
+
+  <script>
+    function filterWork(category, btnElement) {
+      // 1. Update Active Tab Styling
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      // 2. Filter Video Project Cards
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
